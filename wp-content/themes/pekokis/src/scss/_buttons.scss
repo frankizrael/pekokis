@@ -1,0 +1,40 @@
+
+.btn {
+    background: #c41a2c;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 10px 15px;
+    border: none;
+    font-family: 'Poppins';
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    i {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 5px;
+        svg {
+            display: block;
+        }
+    }
+    &.btn-disable {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+    &.btn-gris {
+        background: white;
+        color: #808080;
+        border: solid 1px #808080;
+        i {
+            svg {
+                path {
+                    stroke: white;
+                }
+                circle {
+                    fill: #808080;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+@import "utilities";
+.top-frame {
+    background: #d32485;
+    color: white;
+    font-size: 12px;
+    font-family: 'Poppins';
+    padding: 5px 0px;
+    .x-container {
+        position: relative;
+        .x-close {
+            cursor: pointer;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 0px;
+            right: 0;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 2px;
+                background: white;
+                transform: rotate(45deg);
+                top: 9px;
+                left: 2px;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 2px;
+                background: white;
+                transform: rotate(-45deg);
+                top: 9px;
+                left: 2px;
+            }
+        }
+    }
+}

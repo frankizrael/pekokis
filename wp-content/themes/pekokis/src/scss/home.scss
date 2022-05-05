@@ -1,0 +1,343 @@
+@import "utilities";
+@import "variables";
+
+.main {
+    position: relative;
+    margin-top: 110px;
+    height: calc(100vh - 110px);
+    background-size: cover;
+    @include maxw(notlaptop) {
+        margin-top: 60px;
+        height: calc(100vh - 60px);
+    }
+    .mainHeight {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+        &:before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            background-color: #000000;
+            opacity: 0.4;
+            z-index: 0;
+        }
+        .mainContent {
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            font-size: 75px;
+            font-weight: 700;
+            color: white;
+            line-height: 80px;
+            margin-bottom: 10px;
+            @include maxw(notlaptop) {
+                font-size: 30px;
+                line-height: 33px;
+                margin-bottom: 15px;
+            }
+        }
+        p {
+            color: white;
+            font-size: 18px; 
+            margin-bottom: 20px;
+        }
+        .formSearch {
+            padding: 30px;
+            background: white;
+            max-width: 1200px;
+            margin: auto;
+            form {
+                display: flex;
+                justify-content: space-between;
+                @include maxw(notlaptop) {
+                    display: block;
+                }
+                div {
+                    width: calc(25% - 30px);
+                    @include maxw(notlaptop) {
+                        width: 100%;
+                        margin-bottom: 20px;
+                    }
+                    &.selecting select {
+                        font-family: 'Poppins';
+                        color: #404047;
+                        font-size: 14px;
+                        font-weight: 700;
+                        background: #F7F7F7;
+                        padding: 20px;
+                        width: 100%;
+                        border: solid 1px #F7F7F7;
+                        border-left: solid 3px #c41a2c;
+                    }
+                    button {         
+                        padding: 22px 15px;               
+                        text-transform: uppercase;
+                    }
+                }
+            }
+        }
+    }
+}
+.packprod {
+    padding: 60px 0px;
+    background-color: #F7F7F7;
+    padding-bottom: 30px;
+    .packsInside {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1260px;
+        margin: auto;
+        .pack {
+            width: calc(50% - 15px);
+            margin-bottom: 30px;
+            @include maxw(table_max) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.bannerbrands {
+    background-color: #c41a2c;
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-next, .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+        background: transparent;
+    }
+    .swiper-button-prev, .swiper-button-next {
+        width: 45px;
+    }
+    .swiper-button-prev {
+        left: 0px;
+    }
+    .swiper-button-next {
+        right: 0px;
+    }
+    .swiper-wrapper {
+        padding: 40px 40px;
+        width: calc(100% - 80px);
+        @include maxw(notlaptop) {
+            padding: 20px 20px;
+            width: calc(100% - 40px);
+        }
+    }    
+    .swiper-slide {
+        width: 16.66%;
+        @include maxw(notlaptop) {
+            width: 33.33%;
+        }
+        @include maxw(table_max) {
+            width: 50%;
+        }
+        a {
+            display: flex;
+            height: 70px;
+            align-items: center;
+            img {
+                max-height: 80px;
+            }
+        }
+        img {
+            display: block;
+            margin: auto;
+        }
+    }
+}
+
+.bestProducts {
+    padding: 60px 0px;
+    background-color: #F7F7F7;
+    padding-bottom: 30px;
+    .bestProducts {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1260px;
+        margin: auto;
+        .offerProducts {
+            width: calc(50% - 15px);
+            margin-bottom: 30px;            
+            @include maxw(table_max) {
+                width: 100%;
+            }
+        }
+    }
+}
+
+.allproducts {
+    padding: 60px 0px;
+    background-color: white;
+    padding-bottom: 30px;
+    .allProductsContent {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1260px;
+        margin: auto;
+        .myProduct {
+            width: calc(25% - 15px);
+            margin-bottom: 30px;
+            @include maxw(notlaptop) {
+                width: calc(50% - 15px);
+            }
+        }
+    }
+    .aditionalBton {
+        margin: 60px 0px;
+        a {
+            border-radius: 27px;
+            max-width: 250px;
+            margin: auto;        
+        }
+    }
+}
+.bannerBackground {
+    background-size: cover;
+    padding: 70px 20px;
+    position: relative;
+    z-index: 1;
+    &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: black;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.6;
+    }
+    .bannerCenter {
+        z-index: 1;
+        position: relative;
+        max-width: 750px;
+        margin: auto;
+        text-align: center;
+        p {
+            color: #FBB71C;
+            font-size: 15px;
+            line-height: 20px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: white;
+            font-family: 'Poppins';
+            font-size: 48px;
+            line-height: 58px;
+            margin-bottom: 40px;
+            @include maxw(table_max) {
+                font-size: 24px;
+                line-height: 30px;
+                margin-bottom: 20px;
+            }
+        }
+        .suscriptionForm {
+            display: flex;
+            padding: 15px;
+            background: white;
+            border-radius: 42px;
+            align-items: center;
+            justify-content: space-between;
+            @include maxw(table_max) {
+                padding: 7px;
+                border-radius: 30px;
+            }
+            span {
+                display: block;
+                @include maxw(table_max) {
+                    max-width: calc(100% - 135px);
+                    flex: none;
+                }
+                input {
+                    height: 41px;
+                    border: none;
+                    font-size: 14px;
+                    font-family: 'Poppins';
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+            }
+            .btn {
+                border-radius: 25px;
+                max-width: 230px;
+                padding: 17px;
+                @include maxw(table_max) {
+                    width: 135px;
+                    flex: none;
+                }
+            }
+        }
+    }
+}
+.moreSalesproducts {
+    background-size: cover;
+    padding: 70px 20px;
+    position: relative;
+    z-index: 1;
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-next, .swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+        background: transparent;
+    }
+    .swiper-button-prev, .swiper-button-next {
+        width: 45px;
+        svg {
+            path {
+                stroke: #C41A2C;
+            }
+        }
+    }
+    .swiper-button-prev {
+        left: 0px;
+    }
+    .swiper-button-next {
+        right: 0px;
+    }
+    .swiper-wrapper {
+        padding: 50px;
+        width: calc(100% - 100px);
+        @include maxw(notlaptop) {
+            padding: 10px 50px;
+            width: calc(100% - 100px);
+        }
+    }    
+    .swiper-slide {
+        width: calc(25% - 10px);
+        margin-right: 10px;
+        @include maxw(notlaptop) {
+            width: calc(33.33% - 10px);
+        }
+        @include maxw(table_max) {
+            width: 100%;
+            margin-right: 0px;
+        }
+    }
+}
+
+.moreBrands {
+    background: #f7f7f7;
+    padding: 100px 0px;
+    @include maxw(notlaptop) {
+        padding: 50px 0px;
+    }
+    .flexBrandes {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        img {
+            @include maxw(notlaptop) {
+                max-width: 70px;
+            }
+            @include maxw(table_max) {
+                max-width: 50px;
+            }
+        }
+    }
+}

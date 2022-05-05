@@ -1,0 +1,64 @@
+/* Imports */
+@import "fonts";
+@import "variables";
+@import "main";
+@import "buttons";
+@import "titles";
+@import "content";
+@import "navigation";
+@import "form";
+body {
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+}
+a {
+    text-decoration: none;
+    color: $black;
+}
+h1, h2, h3, h4, p, button, ul, li {
+    color: $black;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.x-container {
+    max-width: 1400px;
+    margin: auto;
+    @include maxw(mypc) {
+        max-width: 1250px;
+    }
+    @include maxw(laptop) {
+        max-width: calc(100% - 40px);
+    }
+}
+.woocommerce-info {
+    background: #F7F7F7;
+    font-size: 14px;
+    font-weight: 400;
+    border-top-color: #c41a2c;
+}
+.flex {
+    display: flex;
+    &.just {
+        justify-content: space-between;
+    }
+    &.alig {
+        align-items: center;
+    }
+}
+button {
+    cursor: pointer;
+}
+::-webkit-scrollbar-thumb {
+    background: $black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+::-webkit-scrollbar-track {
+    background: white;
+}
+::-webkit-scrollbar {
+    width: 9px;
+    height: 5px;
+}

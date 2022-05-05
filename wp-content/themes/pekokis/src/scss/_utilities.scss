@@ -1,0 +1,106 @@
+$view-mypc: 1700px;
+$view-mylaptop: 1400px;
+$view-laptop: 1300px;
+$view-notlaptop: 1200px;
+$view-tablet_p: 1050px;
+$view-table_max: 950px;
+$view-table_min: 768px;
+$view-mobile: 550px;
+$view-extra_width: 740px;
+$view-extra_height: 450px;
+$view-iphone: 321px;
+$view-extra_height: 470px;
+@mixin maxw($breakpoint) {  
+  @if $breakpoint == mypc {
+    @media (max-width: "#{$view-mypc}") {
+      @content;
+    }
+  }
+  @if $breakpoint == mylaptop {
+    @media (max-width: "#{$view-mylaptop}") {
+      @content;
+    }
+  }
+  @if $breakpoint == notlaptop {
+    @media (max-width: "#{$view-notlaptop}") {
+      @content;
+    }
+  }
+  @if $breakpoint == laptop {
+    @media (max-width: "#{$view-laptop}") {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet_p {
+    @media (max-width: "#{$view-tablet_p}") {
+      @content;
+    }
+  }
+  @if $breakpoint == table_max {
+    @media (max-width: "#{$view-table_max}") {
+      @content;
+    }
+  }
+  @if $breakpoint == table_min {
+    @media (max-width: "#{$view-table_min}") {
+      @content;
+    }
+  }
+  @if $breakpoint == mobile {
+    @media (max-width: "#{$view-mobile}") {
+      @content;
+    }
+  }
+  @if $breakpoint == iphone {
+		@media (max-width: "#{$view-iphone}") {
+			@content;
+		}
+	}
+}
+@mixin minw($breakpoint) {  
+  @if $breakpoint == mypc {
+    @media (min-width: "#{$view-mypc}") {
+      @content;
+    }
+  }
+  @if $breakpoint == mylaptop {
+    @media (min-width: "#{$view-mylaptop}") {
+      @content;
+    }
+  }
+  @if $breakpoint == laptop {
+    @media (min-width: "#{$view-laptop}") {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet_p {
+    @media (min-width: "#{$view-tablet_p}") {
+      @content;
+    }
+  }
+  @if $breakpoint == table_max {
+    @media (min-width: "#{$view-table_max}") {
+      @content;
+    }
+  }
+  @if $breakpoint == table_min {
+    @media (min-width: "#{$view-table_min}") {
+      @content;
+    }
+  }
+  @if $breakpoint == mobile {
+    @media (min-width: "#{$view-mobile}") {
+      @content;
+    }
+  }
+  @if $breakpoint == iphone {
+    @media (min-width: "#{$view-iphone}") {
+      @content;
+    }
+  }
+}
+@mixin mobile_horizontal() {
+    @media (max-height: "#{$view-extra_height}"){
+      @content;
+    }
+}

@@ -1,0 +1,115 @@
+footer {
+    background: #262626;
+    padding: 60px 0px;
+    color: white;
+    .top-footer {
+        display: flex;
+        justify-content: space-between;
+        @include maxw(notlaptop) {
+            flex-wrap: wrap;
+        }
+        @include maxw(table_max) {
+            display: block;
+        }
+        .item_basic {
+            max-width: 250px;
+            @include maxw(notlaptop) {
+                width: 33.33%;
+                &:first-child {
+                    width: 100%;
+                    flex: none;
+                    max-width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+            @include maxw(table_max) {
+                width: 100%;
+                margin-bottom: 20px;
+                max-width: 100%;
+            }
+            h2 {
+                color: white;
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            ul {
+                li {
+                    a {
+                        color: white;
+                        font-size: 15px;
+                        line-height: 20px;
+                        display: block;
+                        margin-bottom: 15px;
+                    }
+                }
+                &.contact {
+                    li {
+                        a {
+                            display: flex;
+                            align-items: flex-end;
+                            i {
+                                margin-right: 8px;
+                                width: 20px;
+                                text-align: center;
+                                position: relative;
+                                top: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .book {
+            margin-top: 20px;
+            border-top: solid 1px #ffffff38;
+            padding-top: 20px;
+            a {
+                color: white;
+                border: solid 1px white;
+                padding: 14px 10px;
+                display: block;
+                text-align: center;
+                border-radius: 7px;
+            }
+        }
+        .textAdd p {
+            color: white;
+            font-size: 15px;
+            margin: 30px 0px;
+        }
+        .socialFollow {
+            h3 {
+                color: white;
+                font-family: 'Poppins';
+                font-size: 17px;
+                margin-bottom: 10px;
+            }
+            ul {
+                display: flex;
+                li {
+                    margin-right: 15px;
+                    a {
+                        color: white;
+                        font-size: 15px;
+                        line-height: 20px;
+                        display: block;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+    .bottom-footer {
+        border-top: solid 2px #808080;
+        margin-top: 30px;
+        padding-top: 30px;
+        text-align: center;
+        font-size: 15px;
+    }
+}
+.wspFixed {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 99;
+}
